@@ -1,0 +1,184 @@
+$colors:(
+    primary:#1b262c,
+    secundary:#0f4c75,
+    tertiary:#3282b8,
+    quaternary:#bbe1fa,
+);
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    border-style: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    color: map-get($map: $colors, $key: "quaternary");
+    
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background-color: map-get($map: $colors, $key: "primary");
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+    padding: 0% 10%;
+    top: 20%;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20% 10%;
+
+    justify-items: center;
+
+    h1{
+        font-size: 4em;
+    }
+    p{
+        padding: 1em 0;
+    }
+}
+
+.slide{
+    position: relative;
+}
+  
+.slide1{
+    display: block;
+    width: 20vw;
+    height: 30vh;
+    object-fit: cover;
+}
+  
+.slide2{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    opacity: 90%;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+}
+  
+.slide:hover .slide2{
+    bottom: 0;
+    height: 100%;
+}
+
+.slideText{
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1200px){
+    .container{
+        grid-template-columns: auto auto;
+    }
+
+    body{
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        grid-template-columns: auto;
+    }
+
+    body{
+        overflow: scroll;
+    }
+}
+
+
+
+
+
+
+.nav{
+    display: grid;
+    align-items: center;
+    position: fixed;
+    background-color: rgb(27, 26, 26);
+    height: 100vh;
+    width: 80px;
+    z-index: 5;
+
+    li{
+        display: grid;
+        position: relative;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .icon{
+        position: absolute;
+        color: map-get($map: $colors, $key: "secundary");
+        transition: color 0.5s;
+        font-size: 1.5rem;
+    }
+
+    a{
+        display: block;
+        width: 80px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: bold;
+        color: map-get($map: $colors, $key: "primary");
+        color: transparent;
+        transition: color 0.5s;
+        z-index: 5;
+
+        &:hover{
+            color: map-get($map: $colors, $key: "secundary");
+        }
+        &:focus{
+            color: map-get($map: $colors, $key: "secundary");
+        }
+    }
+    li:hover .icon{
+        color: rgb(27, 26, 26);
+    }
+}
+
+.contact{
+    background-color: map-get($map: $colors, $key: "primary");
+    border-color: map-get($map: $colors, $key: "quaternary");
+    position: relative;
+    top: 3em;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 0.7em;
+    font-size: 1em;
+    font-weight: bolder;
+
+    &:hover{
+        background-color: map-get($map: $colors, $key: "quaternary");
+        color: map-get($map: $colors, $key: "primary");
+        border-color: map-get($map: $colors, $key: "quaternary");
+    }
+    &:focus{
+        background-color: map-get($map: $colors, $key: "quaternary");
+        color: map-get($map: $colors, $key: "primary");
+        border-color: map-get($map: $colors, $key: "quaternary");
+    }
+}

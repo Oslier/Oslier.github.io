@@ -1,0 +1,148 @@
+$colors:(
+    primary:#1b262c,
+    secundary:#0f4c75,
+    tertiary:#3282b8,
+    quaternary:#bbe1fa,
+);
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    border-style: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    color: map-get($map: $colors, $key: "quaternary");
+    
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background-color: map-get($map: $colors, $key: "primary");
+    overflow: hidden;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    padding: 0% 10%;
+    top: 35%;
+    height: 50%;
+    z-index: 1;
+
+    h1{
+        font-size: 4em;
+    }
+    p{
+        padding: 1em 0;
+    }
+}
+
+.flowchart{
+    position: relative;
+    min-height: 200px;
+    height: 100%;
+    left: 20%;
+}
+
+.nav{
+    display: grid;
+    align-items: center;
+    position: fixed;
+    background-color: rgb(27, 26, 26);
+    height: 100vh;
+    width: 80px;
+    z-index: 5;
+
+    li{
+        display: grid;
+        position: relative;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .icon{
+        position: absolute;
+        color: map-get($map: $colors, $key: "secundary");
+        transition: color 0.5s;
+        font-size: 1.5rem;
+    }
+
+    a{
+        display: block;
+        width: 80px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: bold;
+        color: map-get($map: $colors, $key: "primary");
+        color: transparent;
+        transition: color 0.5s;
+        z-index: 5;
+
+        &:hover{
+            color: map-get($map: $colors, $key: "secundary");
+        }
+        &:focus{
+            color: map-get($map: $colors, $key: "secundary");
+        }
+    }
+    li:hover .icon{
+        color: rgb(27, 26, 26);
+    }
+}
+
+.contact{
+    background-color: map-get($map: $colors, $key: "primary");
+    border-color: map-get($map: $colors, $key: "quaternary");
+    position: relative;
+    top: 3em;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 0.7em;
+    font-size: 1em;
+    font-weight: bolder;
+
+    &:hover{
+        background-color: map-get($map: $colors, $key: "quaternary");
+        color: map-get($map: $colors, $key: "primary");
+        border-color: map-get($map: $colors, $key: "quaternary");
+    }
+    &:focus{
+        background-color: map-get($map: $colors, $key: "quaternary");
+        color: map-get($map: $colors, $key: "primary");
+        border-color: map-get($map: $colors, $key: "quaternary");
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .container{
+        grid-template-columns: auto;
+    }
+
+    .flowchart{
+        padding-top: 10%;;
+    }
+
+    body{
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        grid-template-columns: auto;
+    }
+
+    body{
+        overflow: scroll;
+    }
+}
