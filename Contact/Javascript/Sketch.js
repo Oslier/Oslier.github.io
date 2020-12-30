@@ -8,6 +8,16 @@ let y = 0;
 //let random = Math.random();
 //let randomTime = 0;
 
+Email.send({
+    SecureToken : "ee42e80e-01c4-46f6-9f66-cbd5773117ab",
+    To : "mysmtp7@gmail.com",
+    From : "mysmtp7@gmail.com",
+    Subject : "This is the subject",
+    Body : "biden is a nigger"
+}).then(
+  message => alert(message)
+);
+
 
 function setup(){
     var myCanvas = document.getElementById("canvas");
