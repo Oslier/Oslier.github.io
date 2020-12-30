@@ -8,7 +8,9 @@ let y = 0;
 //let random = Math.random();
 //let randomTime = 0;
 
-document.getElementById("myForm").submit();
+function send(){
+    document.getElementById("myForm").submit();
+}
 
 function setup(){
     var myCanvas = document.getElementById("canvas");

@@ -23,7 +23,7 @@ body {
   position: relative;
   padding: 0% 10%;
   left: 10%;
-  top: 20%;
+  top: 10%;
   z-index: 1;
 }
 
@@ -113,9 +113,9 @@ input {
   left: 35%;
   width: 30%;
   font-size: 1.5em;
-  color: #0f4c75;
+  color: white;
   padding: 1%;
-  background-color: #1b262c;
+  background-color: transparent;
 }
 
 textarea {
@@ -125,6 +125,36 @@ textarea {
   width: 30%;
   padding: 1%;
   color: #0f4c75;
+}
+
+.send {
+  background-color: #1b262c;
+  border-color: #bbe1fa;
+  position: relative;
+  left: 35%;
+  top: 1em;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 0.7em 2em;
+  font-size: 1.2em;
+  font-weight: bolder;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.send:hover {
+  background-color: #bbe1fa;
+  color: #1b262c;
+  border-color: #1b262c;
+  -webkit-box-shadow: inset 0px 0px 20px #1b262c;
+          box-shadow: inset 0px 0px 20px #1b262c;
+}
+
+.send:focus {
+  background-color: #bbe1fa;
+  color: #1b262c;
+  border-color: #bbe1fa;
 }
 
 #canvas {
