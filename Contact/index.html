@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4bb598382f.js" crossorigin="anonymous"></script>
     <script src="../P5js/p5.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -40,24 +39,24 @@
     </nav>
 
     <div class="container">
-        <form action="" method="post">
+        <form action="https://formspree.io/f/moqppyog" method="POST" id="myForm">
             <div class="label">
                 <label for="">Name</label>
                 <span>
-                    <input type="text" placeholder="First Last">
+                    <input type="text" placeholder="First Last" name="Name">
                 </span>
             </div>
 
             <div class="label">
                 <label for="">Email</label>
                 <span>
-                    <input type="email" placeholder="email@email.com">
+                    <input type="email" placeholder="email@email.com" name="email">
                 </span>
             </div>
 
             <div class="label">
                 <label for="">Message</label>
-                <textarea name="" id="" cols="30" rows="15"></textarea>
+                <textarea name="message" id="" cols="30" rows="15">asdasd</textarea>
             </div>
         </form>
     </div>
