@@ -15,7 +15,7 @@ html {
 
 body {
   height: 100%;
-  background-color: #1b262c;
+  background-color: #fff;
   overflow: hidden;
 }
 
@@ -67,7 +67,7 @@ body {
   text-transform: uppercase;
   font-size: 1em;
   font-weight: bold;
-  color: #1b262c;
+  color: #fff;
   color: transparent;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
@@ -115,7 +115,7 @@ input {
   font-size: 1.5em;
   color: #0f4c75;
   padding: 1%;
-  background-color: #1b262c;
+  background-color: #fff;
 }
 
 textarea {
